@@ -1,0 +1,780 @@
+000425 00160:645176 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0161    Entering nas_proc_establish_ind()
+000426 00160:645182 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110      Entering emm_sap_send()
+000427 00160:645184 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175         Entering emm_as_send()
+000428 00160:645186 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181            EMMAS-SAP - Received primitive EMMAS_ESTABLISH_REQ (205)
+000429 00160:645187 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0573            Entering _emm_as_establish_req()
+000430 00160:645192 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0574               EMMAS-SAP - Received AS connection establish request
+000431 00160:645194 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534               EMM-CTX - get UE id 0x00000001 context (nil)
+000432 00160:645200 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0374               Entering nas_message_decode()
+000433 00160:645202 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0386                  0 (94247287326644 bytes) 07 41 72 08 49 06 00 00 00 00 00 59 05 f0 f0 c0 c0 01 00 2c 02 01 d0 31 27 26 80 80 21 10 01 01 00 10 81 06 00 00 00 00 83 06 00 00 00 00 00 03 00 00 0a 00 00 02 00 00 0c 00 00 01 00 00 0d 00 5c 20 00 31 03 e5 60 3c 90 11 03 57 58 86 20 0b 60 14 00 52 20 60 02 43 c0 00 00 40 08 04 02 60 00 00 02 1f 00 5d 01 03
+000434 00160:645220 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                  Entering _nas_message_header_decode()
+000435 00160:645222 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                  Leaving _nas_message_header_decode() (rc=1)
+000436 00160:645223 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0392                  _nas_message_header_decode returned size 1
+000437 00160:645225 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0745                  Entering _nas_message_plain_decode()
+000438 00160:645226 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0093                     Entering emm_msg_decode()
+000439 00160:645228 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0112                        EMM-MSG   - Message Type 0x41
+000440 00160:645234 7F56FDE77700 INFO  NAS-EM rc/nas/ies/UeNetworkCapability.c:0050                        decode_ue_network_capability len = 5
+000441 00160:645235 7F56FDE77700 INFO  NAS-EM rc/nas/ies/UeNetworkCapability.c:0069                        uenetworkcapability decoded UMTS
+000442 00160:645237 7F56FDE77700 INFO  NAS-EM rc/nas/ies/UeNetworkCapability.c:0080                        uenetworkcapability decoded misc flags
+000443 00160:645238 7F56FDE77700 INFO  NAS-EM rc/nas/ies/UeNetworkCapability.c:0085                        uenetworkcapability decoded=6
+000444 00160:645239 7F56FDE77700 INFO  NAS-EM rc/nas/ies/UeNetworkCapability.c:0089                        uenetworkcapability then decoded=6
+000445 00160:645240 7F56FDE77700 TRACE NAS-ES rc/nas/ies/EsmMessageContainer.c:0042                        Entering decode_esm_message_container()
+000446 00160:645242 7F56FDE77700 TRACE NAS-ES rc/nas/ies/EsmMessageContainer.c:0058                        Leaving decode_esm_message_container() (rc=46)
+000447 00160:645245 7F56FDE77700 INFO  NAS-EM rc/nas/ies/MsNetworkCapability.c:0049                        decode_ms_network_capability len = 3
+000448 00160:645252 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0245                     Leaving emm_msg_decode() (rc=2)
+000449 00160:645253 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0765                  Leaving _nas_message_plain_decode() (rc=2)
+000450 00160:645255 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0514               Leaving nas_message_decode() (rc=2)
+000451 00160:645256 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0142               Entering emm_recv_attach_request()
+000452 00160:645258 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0143                  EMMAS-SAP - Received Attach Request message
+000453 00160:645259 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0178                  EMMAS-SAP - get attach type EPS_ATTACH_TYPE_COMBINED_EPS_IMSI
+000454 00160:645260 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0223                  EMMAS-SAP - get IMSI
+000455 00160:645263 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:0250                  Entering emm_proc_attach_request()
+000456 00160:645265 7F56FDE77700 INFO  NAS-EM /openair-cn/src/nas/emm/Attach.c:0265                     EMM-PROC  - EPS attach type = IMSI (1) requested (ue_id=0x00000001)
+000457 00160:645267 7F56FDE77700 INFO  NAS-EM /openair-cn/src/nas/emm/Attach.c:0266                     EMM-PROC  - umts_present = 1 gprs_present = 1
+000458 00160:645268 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                     EMM-CTX - get UE id 0x00000001 context (nil)
+000459 00160:645274 7F56FDE77700 NOTIC NAS-EM /openair-cn/src/nas/emm/Attach.c:0510                     EMM-PROC  - Create EMM context ue_id = 0x00000001
+000460 00160:645275 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0176                     Entering emm_fsm_set_status()
+000461 00160:645277 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0182                        UE 0x00000001 EMM-FSM   - Status changed: INVALID ===> DEREGISTERED
+000462 00160:645280 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1014                        Entering mme_ue_context_update_ue_emm_state()
+000463 00160:645282 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1033                        Leaving mme_ue_context_update_ue_emm_state()
+000464 00160:645283 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0194                     Leaving emm_fsm_set_status() (rc=0)
+000465 00160:645285 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0143                     ue_id=0x00000001 GUTI cleared
+000466 00160:645286 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0168                     ue_id=0x00000001 old GUTI cleared
+000467 00160:645288 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0194                     ue_id=0x00000001 cleared IMSI
+000468 00160:645289 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0230                     ue_id=0x00000001 IMEI cleared
+000469 00160:645291 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0263                     ue_id=0x00000001 cleared IMEI_SV 
+000470 00160:645292 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0288                     ue_id=0x00000001 cleared last visited registered TAI
+000471 00160:645294 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0361                     ue_id=0x00000001 set security context security type 0
+000472 00160:645295 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0368                     ue_id=0x00000001 set security context eksi 7
+000473 00160:645296 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0375                     ue_id=0x00000001 clear security context vector index
+000474 00160:645298 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0354                     ue_id=0x00000001 cleared security context 
+000475 00160:645299 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0402                     ue_id=0x00000001 clear non current security context vector index
+000476 00160:645301 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0396                     ue_id=0x00000001 cleared non current security context 
+000477 00160:645302 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0375                     ue_id=0x00000001 clear security context vector index
+000478 00160:645303 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0320                     ue_id=0x00000001 cleared auth vectors 
+000479 00160:645305 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0443                     ue_id=0x00000001 cleared MS network capability IE
+000480 00160:645306 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0417                     ue_id=0x00000001 cleared UE network capability IE
+000481 00160:645307 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0452                     ue_id=0x00000001 cleared current DRX parameter
+000482 00160:645308 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0477                     ue_id=0x00000001 cleared pending DRX parameter
+000483 00160:645309 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0502                     ue_id=0x00000001 cleared EPS bearer context status
+000484 00160:645312 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0672                     EMM-CTX - Add in context 0x7f56f4000f50 UE id 0x00000001
+000485 00160:645313 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0288                     ue_id=0x00000001 cleared last visited registered TAI
+000486 00160:645315 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1876                     Entering _emm_attach_update()
+000487 00160:645316 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0219                        ue_id=0x00000001 set IMSI 460000000000095 (valid)
+000488 00160:645317 7F56FDE77700 TRACE NAS    air-cn/src/nas/api/mme/mme_api.c:0230                        Entering mme_api_notify_imsi()
+000489 00160:645319 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:0412                           Entering mme_ue_context_update_coll_keys()
+000490 00160:645321 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:0415                              Update ue context.old_enb_ue_s1ap_id_key 60129962285 ue context.old_mme_ue_s1ap_id 0x00000001 ue context.old_IMSI 0 ue context.old_GUTI 000.000|0000|00|00000000
+000491 00160:645324 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:0418                              Update ue context 0x7f5660001900 updated_enb_ue_s1ap_id_key 60129962285 updated_mme_ue_s1ap_id 0x00000001 updated_IMSI 460000000000095 updated_GUTI 000.000|0000|00|00000000
+000492 00160:645329 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:0534                           Leaving mme_ue_context_update_coll_keys()
+000493 00160:645330 7F56FDE77700 TRACE NAS    air-cn/src/nas/api/mme/mme_api.c:0242                        Leaving mme_api_notify_imsi() (rc=0)
+000494 00160:645333 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0758                        EMM-CTX - Add in context UE id 0x00000001 with IMSI 460000000000095
+000495 00160:645334 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1945                     Leaving _emm_attach_update() (rc=0)
+000496 00160:645336 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1003                     Entering _emm_attach_identify()
+000497 00160:645338 7F56FDE77700 INFO  NAS-EM /openair-cn/src/nas/emm/Attach.c:1009                        ue_id=0x00000001 EMM-PROC  - Identify incoming UE using IMSI
+000498 00160:645339 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0307                        Entering nas_itti_auth_info_req()
+000499 00160:645347 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0338                        Leaving nas_itti_auth_info_req()
+000500 00160:645348 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1139                     Leaving _emm_attach_identify() (rc=0)
+000501 00160:645350 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:0574                  Leaving emm_proc_attach_request() (rc=0)
+000502 00160:645351 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0316               Leaving emm_recv_attach_request() (rc=0)
+000503 00160:645352 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0704            Leaving _emm_as_establish_req() (rc=0)
+000504 00160:645354 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243         Leaving emm_as_send() (rc=0)
+000505 00160:645355 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143      Leaving emm_sap_send() (rc=0)
+000506 00160:645356 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0190    Leaving nas_proc_establish_ind() (rc=0)
+000507 00160:645373 7F5690FF9700 DEBUG S6A    enair-cn/src/s6a/s6a_auth_info.c:0377    s6a_generate_authentication_info_req plmn: 64F000
+000508 00160:645376 7F5690FF9700 DEBUG S6A    enair-cn/src/s6a/s6a_auth_info.c:0378    s6a_generate_authentication_info_req visited_plmn: 64F000
+000509 00160:645429 7F566BFFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    SENT to 'hss.OpenAir5G.Alliance': 'Authentication-Information-Request'16777251/318 f:RP-- src:'(nil)' len:288 {C:263/l:50,C:277/l:12,C:264/l:30,C:296/l:26,C:293/l:30,C:283/l:26,C:1/l:23,V:10415/C:1407/l:15,V:10415/C:1408/l:44}
+000510 00160:645433 7F566BFFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Sending 288b data on connection {----} TCP,#38->127.0.0.1(3868)
+000511 00160:646140 7F56D7FFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    'STATE_OPEN'	<-- 'FDEVP_CNX_MSG_RECV'	(0x7f565c000d30,300)	'hss.OpenAir5G.Alliance'
+000512 00160:646151 7F56D7FFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    RCV from 'hss.OpenAir5G.Alliance': (no model)16777251/318 f:-P-- src:'hss.OpenAir5G.Alliance' len:300 {C:263/l:50,V:10415/C:1413/l:144,C:277/l:12,C:264/l:30,C:296/l:26,C:268/l:12}
+000513 00160:646166 7F56D7FFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Peer timeout reset to 30 seconds (+/- 2)
+000514 00160:646169 7F56D7FFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    'hss.OpenAir5G.Alliance' in state 'STATE_OPEN' waiting for next event.
+000515 00160:646222 7F56D4FF9700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    DISPATCHING: (no model)16777251/318 f:-P-- src:'hss.OpenAir5G.Alliance' len:300 {C:263/l:50,V:10415/C:1413/l:144,C:277/l:12,C:264/l:30,C:296/l:26,C:268/l:12,C:282/l:8}
+000516 00160:646284 7F56D77FE700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Iterating on rules of AVP: 'E-UTRAN-Vector'.
+000517 00160:646288 7F56D77FE700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Iterating on rules of AVP: 'Authentication-Info'.
+000518 00160:646291 7F56D77FE700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Iterating on rules of COMMAND: 'Authentication-Information-Answer'.
+000519 00160:646304 7F56D77FE700 DEBUG S6A    enair-cn/src/s6a/s6a_auth_info.c:0217    Received S6A Authentication Information Answer (AIA)
+000520 00160:646311 7F56D77FE700 DEBUG S6A    enair-cn/src/s6a/s6a_auth_info.c:0243    Received S6A Result code 2001:DIAMETER_SUCCESS
+000521 00160:646324 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0337    Entering nas_proc_authentication_info_answer()
+000522 00160:646329 7F56FDE77700 DEBUG NAS-EM ea/openair-cn/src/nas/nas_proc.c:0342      Handling imsi 460000000000095
+000523 00160:646330 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534      EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000524 00160:646332 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0556      EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50 by imsi 460000000000095
+000525 00160:646334 7F56FDE77700 DEBUG NAS-EM ea/openair-cn/src/nas/nas_proc.c:0360      INFORMING NAS ABOUT AUTH RESP SUCCESS got 1 vector(s)
+000526 00160:646336 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0390      Entering nas_proc_auth_param_res()
+000527 00160:646339 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110         Entering emm_sap_send()
+000528 00160:646340 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0451            Entering emm_cn_send()
+000529 00160:646341 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0452               EMMCN-SAP - Received primitive EMM_CN_AUTHENTICATION_PARAM_RES (401)
+000530 00160:646342 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Message discarded ('Internal error: Answer received to locally issued request, but not handled by any handler.'):
+000531 00160:646344 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0096               Entering _emm_cn_authentication_res()
+000532 00160:646345 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080       'Authentication-Information-Answer'
+000533 00160:646346 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                  EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000534 00160:646347 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Version: 0x01
+000535 00160:646348 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0113                  EMM-PROC  - Received Vector 0:
+000536 00160:646349 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Length: 300
+000538 00160:646351 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Flags: 0x40 (-P--)
+000537 00160:646350 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0114                  EMM-PROC  - Received RAND ..: 66,f8,d8,2d,bb,a3,63,19,f6,e8,d2,37,72,2b,ff,0c
+000539 00160:646352 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Command Code: 318
+000540 00160:646353 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0115                  EMM-PROC  - Received AUTN ..: fd,03,77,c0,82,f6,80,00,23,77,97,e9,35,55,98,3c
+000541 00160:646354 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         ApplicationId: 16777251
+000543 00160:646356 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Hop-by-Hop Identifier: 0x4C4B098B
+000542 00160:646356 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0117                  EMM-PROC  - Received KASME .: c1,71,57,6a,b7,99,be,ca,38,c4,a0,a8,8a,74,4e,ed 65,02,a7,7a,1e,21,e7,be,df,3c,48,69,5f,9e,88,b6
+000544 00160:646358 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         End-to-End Identifier: 0x00000000
+000545 00160:646359 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0381                  ue_id=0x00000001 set security context vector index 0
+000546 00160:646360 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          {internal data}: src:hss.OpenAir5G.Alliance(22) rwb:(nil) rt:1 cb:(nil),(nil)((nil)) qry:0x7f5670001b60 asso:0 sess:0x7f5670001ce0
+000547 00160:646361 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0176                  Entering emm_proc_authentication()
+000548 00160:646361 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Session-Id'(263) l=50 f=-M val="mme.OpenAir5G.Alliance;1596695902;1;apps6a"
+000550 00160:646363 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Authentication-Info'(1413) vend='3GPP'(10415) l=144 f=VM val=(grouped)
+000549 00160:646363 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0177                     ue_id=0x00000001 EMM-PROC  - Initiate authentication KSI = 0, ctx = 0x7f56f4000f50
+000551 00160:646365 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080             AVP: 'E-UTRAN-Vector'(1414) vend='3GPP'(10415) l=132 f=VM val=(grouped)
+000552 00160:646366 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0163                     Entering emm_proc_common_initialize()
+000553 00160:646367 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'RAND'(1447) vend='3GPP'(10415) l=28 f=VM val=<66 F8 D8 2D BB A3 63 19 F6 E8 D2 37 72 2B FF 0C>
+000554 00160:646369 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0188                     Leaving emm_proc_common_initialize() (rc=0)
+000555 00160:646369 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'XRES'(1448) vend='3GPP'(10415) l=20 f=VM val=<12 8E 0A E8 70 8E 82 51>
+000556 00160:646371 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0559                     Entering _authentication_request()
+000557 00160:646371 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'AUTN'(1449) vend='3GPP'(10415) l=28 f=VM val=<FD 03 77 C0 82 F6 80 00 23 77 97 E9 35 55 98 3C>
+000558 00160:646373 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                        EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000559 00160:646373 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'KASME'(1450) vend='3GPP'(10415) l=44 f=VM val=<C1 71 57 6A B7 99 BE CA 38 C4 A0 A8 8A 74 4E ED 65 02 A7 7A 1E 21 E7 BE DF 3C 48 69 5F 9E 88 B6>
+000561 00160:646375 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Auth-Session-State'(277) l=12 f=-M val='NO_STATE_MAINTAINED' (1 (0x1))
+000560 00160:646375 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0352                        Entering emm_as_set_security_data()
+000562 00160:646377 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Origin-Host'(264) l=30 f=-M val="hss.OpenAir5G.Alliance"
+000563 00160:646377 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0398                           NO Valid Security Context Available
+000564 00160:646379 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Origin-Realm'(296) l=26 f=-M val="OpenAir5G.Alliance"
+000565 00160:646380 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0405                        Leaving emm_as_set_security_data()
+000566 00160:646381 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Result-Code'(268) l=12 f=-M val='DIAMETER_SUCCESS' (2001 (0x7d1))
+000567 00160:646383 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Route-Record'(282) l=8 f=-M val="hss.OpenAir5G.Alliance"
+000568 00160:646383 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                        Entering emm_sap_send()
+000569 00160:646385 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175                           Entering emm_as_send()
+000570 00160:646387 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181                              EMMAS-SAP - Received primitive EMMAS_SECURITY_REQ (201)
+000571 00160:646390 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0923                              Entering _emm_as_send()
+000572 00160:646393 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1267                                 Entering _emm_as_security_req()
+000573 00160:646395 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1270                                    EMMAS-SAP - Send AS security request
+000574 00160:646398 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0734                                    Entering _emm_as_set_header()
+000575 00160:646401 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0786                                    Leaving _emm_as_set_header() (rc=140011603715360)
+000576 00160:646405 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0905                                    Entering emm_send_authentication_request()
+000577 00160:646407 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0908                                       EMMAS-SAP - Send Authentication Request message
+000578 00160:646410 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0935                                    Leaving emm_send_authentication_request() (rc=36)
+000579 00160:646412 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                    EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000580 00160:646415 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0815                                    Entering _emm_as_encode()
+000581 00160:646417 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0540                                       Entering nas_message_encode()
+000582 00160:646420 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0852                                          Entering _nas_message_header_encode()
+000583 00160:646422 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0885                                          Leaving _nas_message_header_encode() (rc=1)
+000584 00160:646424 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0913                                          Entering _nas_message_plain_encode()
+000585 00160:646427 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0271                                             Entering emm_msg_encode()
+000586 00160:646432 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0420                                             Leaving emm_msg_encode() (rc=36)
+000587 00160:646434 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0933                                          Leaving _nas_message_plain_encode() (rc=36)
+000588 00160:646437 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0623                                       Leaving nas_message_encode() (rc=36)
+000589 00160:646440 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0851                                    Leaving _emm_as_encode() (rc=36)
+000590 00160:646442 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1353                                 Leaving _emm_as_security_req() (rc=263)
+000591 00160:646445 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0968                                 EMMAS-SAP - Sending msg with id 0x107, primitive EMMAS_SECURITY_REQ (201) to S1AP layer for transmission
+000592 00160:646451 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0973                              Leaving _emm_as_send() (rc=0)
+000593 00160:646454 7F56E6FFD700 TRACE MME-AP /src/mme_app/mme_app_transport.c:0057    Entering mme_app_handle_nas_dl_req()
+000594 00160:646456 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243                           Leaving emm_as_send() (rc=0)
+000595 00160:646458 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                        Leaving emm_sap_send() (rc=0)
+000596 00160:646463 7F56E6FFD700 DEBUG MME-AP /src/mme_app/mme_app_transport.c:0087      MME_APP:DOWNLINK NAS TRANSPORT. Establishing S1 sig connection. mme_ue_s1ap_id = 1,enb_ue_s1ap_id = 420141 
+000597 00160:646465 7F56E6FFD700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:0734      Entering mme_ue_context_update_ue_sig_connection_state()
+000598 00160:646466 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0605                        EMM-PROC  - Timer T3460 (0) expires in 6 seconds
+000599 00160:646467 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0609                     Leaving _authentication_request() (rc=0)
+000601 00160:646470 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                     Entering emm_sap_send()
+000600 00160:646469 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0344    Entering s1ap_generate_downlink_nas_transport()
+000602 00160:646470 7F56E6FFD700 DEBUG MME-AP cn/src/mme_app/mme_app_context.c:0768         MME_APP: UE Connection State changed to CONNECTED.enb_ue_s1ap_id = 420141, mme_ue_s1ap_id = 1
+000603 00160:646472 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0106                        Entering emm_reg_send()
+000604 00160:646475 7F56E6FFD700 TRACE MME-AP /src/mme_app/mme_app_transport.c:0098      Leaving mme_app_handle_nas_dl_req() (rc=0)
+000605 00160:646476 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0256                           Entering emm_fsm_process()
+000606 00160:646480 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0263                              EMM-FSM   - Received event COMMON_PROC_REQ (1) in state DEREGISTERED
+000607 00160:646486 7F56E77FE700 NOTIC S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0399      Send S1AP DOWNLINK_NAS_TRANSPORT message ue_id = 0x00000001 MME_UE_S1AP_ID = 0x00000001 eNB_UE_S1AP_ID = 0x06692D
+000608 00160:646487 7F56FDE77700 TRACE NAS-EM rc/nas/emm/sap/EmmDeregistered.c:0094                              Entering EmmDeregistered()
+000609 00160:646492 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0176                                 Entering emm_fsm_set_status()
+000610 00160:646493 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0409    Leaving s1ap_generate_downlink_nas_transport() (rc=0)
+000611 00160:646496 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0182                                    UE 0x00000001 EMM-FSM   - Status changed: DEREGISTERED ===> COMMON-PROCEDURE-INITIATED
+000613 00160:646503 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1014                                    Entering mme_ue_context_update_ue_emm_state()
+000614 00160:646508 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1033                                    Leaving mme_ue_context_update_ue_emm_state()
+000615 00160:646512 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0194                                 Leaving emm_fsm_set_status() (rc=0)
+000612 00160:646501 7F56FD676700 DEBUG SCTP   rc/sctp/sctp_primitives_server.c:0277    [40][10] Sending buffer 0x7f56d8004710 of 62 bytes on stream 1 with ppid 18
+000616 00160:646516 7F56FDE77700 TRACE NAS-EM rc/nas/emm/sap/EmmDeregistered.c:0155                              Leaving EmmDeregistered() (rc=0)
+000617 00160:646522 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0271                           Leaving emm_fsm_process() (rc=0)
+000618 00160:646526 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0119                        Leaving emm_reg_send() (rc=0)
+000619 00160:646529 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                     Leaving emm_sap_send() (rc=0)
+000620 00160:646532 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0241                  Leaving emm_proc_authentication() (rc=0)
+000621 00160:646538 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0160               Leaving _emm_cn_authentication_res() (rc=0)
+000622 00160:646542 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0494            Leaving emm_cn_send() (rc=0)
+000623 00160:646545 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143         Leaving emm_sap_send() (rc=0)
+000624 00160:646549 7F56FD676700 DEBUG SCTP   rc/sctp/sctp_primitives_server.c:0288    Successfully sent 62 bytes on stream 1
+000625 00160:646549 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0402      Leaving nas_proc_auth_param_res() (rc=0)
+000626 00160:646555 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0376    Leaving nas_proc_authentication_info_answer() (rc=0)
+
+
+000636 00160:952015 7F56E77FE700 TRACE S1AP   r-cn/src/s1ap/s1ap_mme_decoder.c:0050    Entering s1ap_mme_decode_initiating()
+000637 00160:952036 7F56E77FE700 DEBUG S1AP   /CMakeFiles/r10.5/s1ap_decoder.c:6339      Decoding message S1ap_UplinkNASTransportIEs (/home/xy/workarea/openair-cn/build/mme/build/CMakeFiles/r10.5/s1ap_decoder.c:6339)
+000638 00160:952055 7F56E77FE700 TRACE S1AP   r-cn/src/s1ap/s1ap_mme_decoder.c:0144    Leaving s1ap_mme_decode_initiating() (rc=0)
+000639 00160:952057 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0209    Entering s1ap_mme_handle_uplink_nas_transport()
+000640 00160:952058 7F56E77FE700 INFO  S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0224      Received S1AP UPLINK_NAS_TRANSPORT message MME_UE_S1AP_ID 0x00000001
+000641 00160:952061 7F56E77FE700 TRACE S1AP   a/openair-cn/src/s1ap/s1ap_mme.c:0414      Found ue_ref 0x7f56d80048a0 mme_ue_s1ap_id 0x00000001
+000642 00160:952062 7F56E77FE700 TRACE S1AP   a/openair-cn/src/s1ap/s1ap_mme.c:0428      Found ue_ref 0x7f56d80048a0 mme_ue_s1ap_id 0x00000001
+000643 00160:952064 7F56E77FE700 TRACE S1AP   a/openair-cn/src/s1ap/s1ap_mme.c:0469      Return ue_ref 0x7f56d80048a0
+000644 00160:952078 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0276    Leaving s1ap_mme_handle_uplink_nas_transport() (rc=0)
+000645 00160:952082 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0300    Entering nas_proc_ul_transfer_ind()
+000646 00160:952088 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110      Entering emm_sap_send()
+000647 00160:952090 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175         Entering emm_as_send()
+000648 00160:952091 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181            EMMAS-SAP - Received primitive EMMAS_DATA_IND (211)
+
+
+000706 00160:953456 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0337    Entering nas_proc_authentication_info_answer()
+000707 00160:953460 7F56FDE77700 DEBUG NAS-EM ea/openair-cn/src/nas/nas_proc.c:0342      Handling imsi 460000000000095
+000708 00160:953462 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534      EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000709 00160:953463 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0556      EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50 by imsi 460000000000095
+000710 00160:953465 7F56FDE77700 DEBUG NAS-EM ea/openair-cn/src/nas/nas_proc.c:0360      INFORMING NAS ABOUT AUTH RESP SUCCESS got 1 vector(s)
+000711 00160:953467 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0390      Entering nas_proc_auth_param_res()
+000712 00160:953470 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110         Entering emm_sap_send()
+000713 00160:953471 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0451            Entering emm_cn_send()
+000714 00160:953473 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0452               EMMCN-SAP - Received primitive EMM_CN_AUTHENTICATION_PARAM_RES (401)
+000715 00160:953474 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0096               Entering _emm_cn_authentication_res()
+000716 00160:953475 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Message discarded ('Internal error: Answer received to locally issued request, but not handled by any handler.'):
+000717 00160:953476 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                  EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000719 00160:953478 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0113                  EMM-PROC  - Received Vector 0:
+000718 00160:953477 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080       'Authentication-Information-Answer'
+000721 00160:953480 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Version: 0x01
+000720 00160:953479 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0114                  EMM-PROC  - Received RAND ..: 15,d9,1c,41,05,64,fe,0a,15,69,d0,20,fd,7a,dc,36
+000723 00160:953482 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Length: 300
+000722 00160:953482 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0115                  EMM-PROC  - Received AUTN ..: d7,6d,f5,a9,44,c3,80,00,6f,94,52,70,67,6c,ef,7f
+000724 00160:953483 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Flags: 0x40 (-P--)
+000725 00160:953484 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0117                  EMM-PROC  - Received KASME .: 56,7a,58,7c,18,0d,52,39,d2,27,ec,ef,b6,79,31,1e 6e,48,bc,03,68,44,d3,f1,3f,74,ad,33,61,7d,82,21
+000726 00160:953485 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Command Code: 318
+000727 00160:953487 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0381                  ue_id=0x00000001 set security context vector index 0
+000728 00160:953488 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         ApplicationId: 16777251
+000730 00160:953490 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         Hop-by-Hop Identifier: 0x4C4B098C
+000729 00160:953489 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0176                  Entering emm_proc_authentication()
+000731 00160:953491 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080         End-to-End Identifier: 0x00000000
+000732 00160:953492 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0177                     ue_id=0x00000001 EMM-PROC  - Initiate authentication KSI = 0, ctx = 0x7f56f4000f50
+000733 00160:953493 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          {internal data}: src:hss.OpenAir5G.Alliance(22) rwb:(nil) rt:1 cb:(nil),(nil)((nil)) qry:0x7f56700023f0 asso:0 sess:0x7f5670002640
+000734 00160:953494 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0163                     Entering emm_proc_common_initialize()
+000735 00160:953495 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Session-Id'(263) l=50 f=-M val="mme.OpenAir5G.Alliance;1596695902;2;apps6a"
+000736 00160:953496 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0188                     Leaving emm_proc_common_initialize() (rc=0)
+000737 00160:953497 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Authentication-Info'(1413) vend='3GPP'(10415) l=144 f=VM val=(grouped)
+000738 00160:953498 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0559                     Entering _authentication_request()
+000739 00160:953499 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080             AVP: 'E-UTRAN-Vector'(1414) vend='3GPP'(10415) l=132 f=VM val=(grouped)
+000740 00160:953500 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                        EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000741 00160:953501 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'RAND'(1447) vend='3GPP'(10415) l=28 f=VM val=<15 D9 1C 41 05 64 FE 0A 15 69 D0 20 FD 7A DC 36>
+000742 00160:953502 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0352                        Entering emm_as_set_security_data()
+000744 00160:953504 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'XRES'(1448) vend='3GPP'(10415) l=20 f=VM val=<12 24 22 3A D5 B4 56 A0>
+000743 00160:953504 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0398                           NO Valid Security Context Available
+000745 00160:953506 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'AUTN'(1449) vend='3GPP'(10415) l=28 f=VM val=<D7 6D F5 A9 44 C3 80 00 6F 94 52 70 67 6C EF 7F>
+000746 00160:953507 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0405                        Leaving emm_as_set_security_data()
+000747 00160:953508 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080                AVP: 'KASME'(1450) vend='3GPP'(10415) l=44 f=VM val=<56 7A 58 7C 18 0D 52 39 D2 27 EC EF B6 79 31 1E 6E 48 BC 03 68 44 D3 F1 3F 74 AD 33 61 7D 82 21>
+000748 00160:953510 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                        Entering emm_sap_send()
+000749 00160:953510 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Auth-Session-State'(277) l=12 f=-M val='NO_STATE_MAINTAINED' (1 (0x1))
+000751 00160:953512 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Origin-Host'(264) l=30 f=-M val="hss.OpenAir5G.Alliance"
+000750 00160:953511 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175                           Entering emm_as_send()
+000752 00160:953513 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Origin-Realm'(296) l=26 f=-M val="OpenAir5G.Alliance"
+000754 00160:953515 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Result-Code'(268) l=12 f=-M val='DIAMETER_SUCCESS' (2001 (0x7d1))
+000753 00160:953514 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181                              EMMAS-SAP - Received primitive EMMAS_SECURITY_REQ (201)
+000755 00160:953517 7F56D77FE700 NOTIC S6A    ea/openair-cn/src/s6a/s6a_task.c:0080          AVP: 'Route-Record'(282) l=8 f=-M val="hss.OpenAir5G.Alliance"
+000756 00160:953517 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0923                              Entering _emm_as_send()
+000757 00160:953520 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1267                                 Entering _emm_as_security_req()
+000758 00160:953523 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1270                                    EMMAS-SAP - Send AS security request
+000759 00160:953525 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0734                                    Entering _emm_as_set_header()
+000760 00160:953528 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0786                                    Leaving _emm_as_set_header() (rc=140011603715360)
+000761 00160:953531 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0905                                    Entering emm_send_authentication_request()
+000762 00160:953533 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0908                                       EMMAS-SAP - Send Authentication Request message
+000763 00160:953536 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0935                                    Leaving emm_send_authentication_request() (rc=36)
+000764 00160:953538 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                    EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000765 00160:953541 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0815                                    Entering _emm_as_encode()
+000766 00160:953543 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0540                                       Entering nas_message_encode()
+000767 00160:953546 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0852                                          Entering _nas_message_header_encode()
+000768 00160:953548 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0885                                          Leaving _nas_message_header_encode() (rc=1)
+000769 00160:953551 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0913                                          Entering _nas_message_plain_encode()
+000770 00160:953553 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0271                                             Entering emm_msg_encode()
+000771 00160:953558 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0420                                             Leaving emm_msg_encode() (rc=36)
+000772 00160:953560 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0933                                          Leaving _nas_message_plain_encode() (rc=36)
+000773 00160:953563 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0623                                       Leaving nas_message_encode() (rc=36)
+000774 00160:953566 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0851                                    Leaving _emm_as_encode() (rc=36)
+000775 00160:953568 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1353                                 Leaving _emm_as_security_req() (rc=263)
+000776 00160:953571 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0968                                 EMMAS-SAP - Sending msg with id 0x107, primitive EMMAS_SECURITY_REQ (201) to S1AP layer for transmission
+000777 00160:953578 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0973                              Leaving _emm_as_send() (rc=0)
+000778 00160:953580 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243                           Leaving emm_as_send() (rc=0)
+000780 00160:953582 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                        Leaving emm_sap_send() (rc=0)
+000779 00160:953581 7F56E6FFD700 TRACE MME-AP /src/mme_app/mme_app_transport.c:0057      Entering mme_app_handle_nas_dl_req()
+000781 00160:953588 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0605                        EMM-PROC  - Timer T3460 (1) expires in 6 seconds
+000782 00160:953588 7F56E6FFD700 TRACE MME-AP /src/mme_app/mme_app_transport.c:0098      Leaving mme_app_handle_nas_dl_req() (rc=0)
+000783 00160:953590 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0609                     Leaving _authentication_request() (rc=0)
+000785 00160:953592 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                     Entering emm_sap_send()
+000784 00160:953591 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0344    Entering s1ap_generate_downlink_nas_transport()
+000786 00160:953593 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0106                        Entering emm_reg_send()
+000787 00160:953595 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0256                           Entering emm_fsm_process()
+000788 00160:953597 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0263                              EMM-FSM   - Received event COMMON_PROC_REQ (1) in state COMMON-PROCEDURE-INITIATED
+000789 00160:953600 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0090                              Entering EmmCommonProcedureInitiated()
+000790 00160:953602 7F56FDE77700 ERROR NAS-EM ap/EmmCommonProcedureInitiated.c:0192                                 EMM-FSM   - Primitive is not valid (1)
+000791 00160:953604 7F56E77FE700 NOTIC S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0399      Send S1AP DOWNLINK_NAS_TRANSPORT message ue_id = 0x00000001 MME_UE_S1AP_ID = 0x00000001 eNB_UE_S1AP_ID = 0x06692D
+000792 00160:953606 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0196                              Leaving EmmCommonProcedureInitiated() (rc=-1)
+000793 00160:953608 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0271                           Leaving emm_fsm_process() (rc=-1)
+000794 00160:953610 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0119                        Leaving emm_reg_send() (rc=-1)
+000795 00160:953611 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0409    Leaving s1ap_generate_downlink_nas_transport() (rc=0)
+000796 00160:953612 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                     Leaving emm_sap_send() (rc=-1)
+000797 00160:953613 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0241                  Leaving emm_proc_authentication() (rc=-1)
+000798 00160:953615 7F56FDE77700 WARNI NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0152                  EMM-PROC  - Failed to initiate authentication procedure
+000799 00160:953616 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0160               Leaving _emm_cn_authentication_res() (rc=-1)
+000800 00160:953618 7F56FDE77700 ERROR NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0491               EMMCN-SAP - Failed to process primitive EMM_CN_AUTHENTICATION_PARAM_RES (401)
+000801 00160:953619 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_cn.c:0494            Leaving emm_cn_send() (rc=-1)
+000802 00160:953621 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143         Leaving emm_sap_send() (rc=-1)
+000804 00160:953622 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0402      Leaving nas_proc_auth_param_res() (rc=-1)
+000803 00160:953621 7F56FD676700 DEBUG SCTP   rc/sctp/sctp_primitives_server.c:0277    [40][10] Sending buffer 0x7f56d800b1c0 of 62 bytes on stream 1 with ppid 18
+000805 00160:953624 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0376    Leaving nas_proc_authentication_info_answer() (rc=-1)
+
+
+000811 00161:380970 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0209    Entering s1ap_mme_handle_uplink_nas_transport()
+000812 00161:380972 7F56E77FE700 INFO  S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0224      Received S1AP UPLINK_NAS_TRANSPORT message MME_UE_S1AP_ID 0x00000001
+000813 00161:380974 7F56E77FE700 TRACE S1AP   a/openair-cn/src/s1ap/s1ap_mme.c:0414      Found ue_ref 0x7f56d80048a0 mme_ue_s1ap_id 0x00000001
+000814 00161:380975 7F56E77FE700 TRACE S1AP   a/openair-cn/src/s1ap/s1ap_mme.c:0428      Found ue_ref 0x7f56d80048a0 mme_ue_s1ap_id 0x00000001
+000815 00161:380977 7F56E77FE700 TRACE S1AP   a/openair-cn/src/s1ap/s1ap_mme.c:0469      Return ue_ref 0x7f56d80048a0
+000817 00161:380990 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0276    Leaving s1ap_mme_handle_uplink_nas_transport() (rc=0)
+000816 00161:380990 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0300    Entering nas_proc_ul_transfer_ind()
+000818 00161:380997 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110      Entering emm_sap_send()
+000819 00161:380998 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175         Entering emm_as_send()
+000820 00161:381000 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181            EMMAS-SAP - Received primitive EMMAS_DATA_IND (211)
+000821 00161:381001 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0456            Entering _emm_as_data_ind()
+000822 00161:381003 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0460               EMMAS-SAP - Received AS data transfer indication (ue_id=0x00000001, delivered=true, length=11)
+000823 00161:381005 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534               EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000824 00161:381007 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0272               Entering nas_message_decrypt()
+000825 00161:381008 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                  Entering _nas_message_header_decode()
+000826 00161:381010 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                  Leaving _nas_message_header_decode() (rc=1)
+000827 00161:381011 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0338                  Plain NAS message found
+000828 00161:381012 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0345               Leaving nas_message_decrypt() (rc=11)
+000829 00161:381014 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0283               Entering _emm_as_recv()
+000830 00161:381015 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0294                  EMMAS-SAP - Received EMM message (length=11) integrity protected 0 ciphered 0 mac matched 0 security context 0
+000831 00161:381017 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                  EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000832 00161:381018 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0374                  Entering nas_message_decode()
+000833 00161:381020 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0386                     0 (94247287326644 bytes) 07 53 08 12 24 22 3a d5 b4 56 a0
+000834 00161:381024 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                     Entering _nas_message_header_decode()
+000835 00161:381025 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                     Leaving _nas_message_header_decode() (rc=1)
+000836 00161:381026 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0392                     _nas_message_header_decode returned size 1
+000837 00161:381028 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0745                     Entering _nas_message_plain_decode()
+000838 00161:381029 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0093                        Entering emm_msg_decode()
+000839 00161:381030 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0112                           EMM-MSG   - Message Type 0x53
+000840 00161:381034 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0245                        Leaving emm_msg_decode() (rc=11)
+000841 00161:381036 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0765                     Leaving _nas_message_plain_decode() (rc=11)
+000842 00161:381037 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0514                  Leaving nas_message_decode() (rc=11)
+000843 00161:381039 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0729                  Entering emm_recv_authentication_response()
+000844 00161:381040 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0732                     EMMAS-SAP - Received Authentication Response message
+000845 00161:381041 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0398                     Entering emm_proc_authentication_complete()
+000846 00161:381043 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0399                        EMM-PROC  - Authentication complete (ue_id=0x00000001)
+000847 00161:381044 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                        EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000848 00161:381046 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0432                        Entering emm_proc_common_get_args()
+000849 00161:381048 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0435                        Leaving emm_proc_common_get_args() (rc=140011437736496)
+000850 00161:381052 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0416                        EMM-PROC  - Stop timer T3460 (-1) UE 0x00000001
+000851 00161:381055 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0368                        ue_id=0x00000001 set security context eksi 0
+000852 00161:381057 7F56FDE77700 DEBUG NAS-EM -cn/src/nas/emm/Authentication.c:0423                        EMM-PROC  - Successful authentication of the UE  RESP XRES == XRES UE CONTEXT
+000853 00161:381060 7F56FDE77700 DEBUG NAS-EM -cn/src/nas/emm/Authentication.c:0430                        EMM-PROC  - Notify EMM that the authentication procedure successfully completed
+000854 00161:381062 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0507                     Leaving emm_proc_common_clear_args()
+000855 00161:381063 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                     Entering emm_sap_send()
+000856 00161:381065 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0106                        Entering emm_reg_send()
+000857 00161:381067 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0256                           Entering emm_fsm_process()
+000858 00161:381069 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0263                              EMM-FSM   - Received event COMMON_PROC_CNF (2) in state COMMON-PROCEDURE-INITIATED
+000859 00161:381073 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0090                              Entering EmmCommonProcedureInitiated()
+000860 00161:381076 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0176                                 Entering emm_fsm_set_status()
+000861 00161:381079 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0182                                    UE 0x00000001 EMM-FSM   - Status changed: COMMON-PROCEDURE-INITIATED ===> DEREGISTERED
+000862 00161:381083 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1014                                    Entering mme_ue_context_update_ue_emm_state()
+000863 00161:381086 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1033                                    Leaving mme_ue_context_update_ue_emm_state()
+000864 00161:381089 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0194                                 Leaving emm_fsm_set_status() (rc=0)
+000865 00161:381092 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0217                                 Entering emm_proc_common_success()
+000866 00161:381095 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                    EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000867 00161:381098 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1167                                    Entering _emm_attach_security()
+000868 00161:381102 7F56FDE77700 INFO  NAS-EM /openair-cn/src/nas/emm/Attach.c:1172                                       ue_id=0x00000001 EMM-PROC  - Setup NAS security
+000869 00161:381105 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0361                                       ue_id=0x00000001 set security context security type 0
+000870 00161:381108 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0368                                       ue_id=0x00000001 set security context eksi 7
+000871 00161:381111 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0375                                       ue_id=0x00000001 clear security context vector index
+000872 00161:381114 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0354                                       ue_id=0x00000001 cleared security context
+000873 00161:381118 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0215                                       Entering emm_proc_security_mode_control()
+000874 00161:381121 7F56FDE77700 INFO  NAS-EM rc/nas/emm/SecurityModeControl.c:0216                                          EMM-PROC  - Initiate security mode control procedure KSI = 7 EEA = 240 EIA = 240
+000875 00161:381124 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                          EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000876 00161:381127 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0381                                          ue_id=0x00000001 set security context vector index 0
+000877 00161:381130 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0368                                          ue_id=0x00000001 set security context eksi 0
+000878 00161:381133 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0815                                          Entering _security_select_algorithms()
+000879 00161:381137 7F56FDE77700 DEBUG NAS-EM rc/nas/emm/SecurityModeControl.c:0823                                             Selected  NAS_SECURITY_ALGORITHMS_EIA2 (choice num 0)
+000880 00161:381140 7F56FDE77700 DEBUG NAS-EM rc/nas/emm/SecurityModeControl.c:0831                                             Selected  NAS_SECURITY_ALGORITHMS_EEA0 (choice num 0)
+000881 00161:381143 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0837                                          Leaving _security_select_algorithms() (rc=0)
+000882 00161:381146 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0361                                          ue_id=0x00000001 set security context security type 2
+000883 00161:381159 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0163                                          Entering emm_proc_common_initialize()
+000884 00161:381162 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0188                                          Leaving emm_proc_common_initialize() (rc=0)
+000885 00161:381165 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0630                                          Entering _security_request()
+000886 00161:381168 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                             EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000887 00161:381172 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0352                                             Entering emm_as_set_security_data()
+000888 00161:381175 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0366                                                EPS security context exists is new 1 KSI 0 SQN 0 count 0
+000889 00161:381179 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0367                                                0 (94247287326644 bytes) 7f 4b 2f 08 88 72 06 02 d7 10 d9 8f 60 fc 58 af
+000890 00161:381184 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0368                                                0 (94247287326644 bytes) 8e 6b 68 68 f9 9a c3 73 c9 d3 45 da 6e 04 e9 41
+000891 00161:381189 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/LowerLayer.c:0405                                             Leaving emm_as_set_security_data()
+000892 00161:381192 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                                             Entering emm_sap_send()
+000893 00161:381195 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175                                                Entering emm_as_send()
+000894 00161:381197 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181                                                   EMMAS-SAP - Received primitive EMMAS_SECURITY_REQ (201)
+000895 00161:381200 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0923                                                   Entering _emm_as_send()
+000896 00161:381203 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1267                                                      Entering _emm_as_security_req()
+000897 00161:381206 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1270                                                         EMMAS-SAP - Send AS security request
+000898 00161:381208 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0734                                                         Entering _emm_as_set_header()
+000899 00161:381211 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0758                                                         Leaving _emm_as_set_header() (rc=140011603713872)
+000900 00161:381215 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0993                                                         Entering emm_send_security_mode_command()
+000901 00161:381217 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:0996                                                            EMMAS-SAP - Send Security Mode Command message
+000902 00161:381220 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:1024                                                            replayeduesecuritycapabilities.gprs_present 1
+000903 00161:381222 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:1025                                                            replayeduesecuritycapabilities.gea          112
+000904 00161:381225 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_send.c:1027                                                         Leaving emm_send_security_mode_command() (rc=12)
+000905 00161:381227 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                                         EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000906 00161:381230 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1339                                                         Set nas_msg.header.sequence_number -> 0
+000907 00161:381232 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0815                                                         Entering _emm_as_encode()
+000908 00161:381235 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0540                                                            Entering nas_message_encode()
+000909 00161:381238 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0852                                                               Entering _nas_message_header_encode()
+000910 00161:381240 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0885                                                               Leaving _nas_message_header_encode() (rc=6)
+000911 00161:381243 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0960                                                               Entering _nas_message_protected_encode()
+000912 00161:381245 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0913                                                                  Entering _nas_message_plain_encode()
+000913 00161:381248 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0271                                                                     Entering emm_msg_encode()
+000914 00161:381252 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0420                                                                     Leaving emm_msg_encode() (rc=10)
+000915 00161:381255 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0933                                                                  Leaving _nas_message_plain_encode() (rc=10)
+000916 00161:381258 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1190                                                                  Entering _nas_message_encrypt()
+000917 00161:381261 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1202                                                                     No encryption of message according to security header type 0x03
+000918 00161:381263 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1204                                                                  Leaving _nas_message_encrypt() (rc=10)
+000919 00161:381266 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0987                                                               Leaving _nas_message_protected_encode() (rc=10)
+000920 00161:381269 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0569                                                               offset 5 = 6 - 1, hdr encode = 6, length = 18 bytes = 10
+000921 00161:381272 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1313                                                               Entering _nas_message_get_mac()
+000922 00161:381274 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1371                                                                  NAS_SECURITY_ALGORITHMS_EIA2 dir DOWNLINK count.seq_num 0 count 0
+000923 00161:381282 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0078                                                                  Byte length: 19, Zero bits: 0:
+000924 00161:381285 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0079                                                                  0 (94247287326644 bytes) 00 00 00 00 04 00 00 00 00 07 5d 02 00 05 f0 f0 c0 40 70
+000925 00161:381291 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0080                                                                  0 (94247287326644 bytes) 7f 4b 2f 08 88 72 06 02 d7 10 d9 8f 60 fc 58 af
+000926 00161:381295 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0081                                                                  0 (94247287326644 bytes) 00 07 5d 02 00 05 f0 f0 c0 40 70
+000927 00161:381311 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0088                                                                  0 (94247287326644 bytes) f6 e3 e9 3d d9 37 a8 6b d8 fc f2 d8 dd ba 04 6c
+000928 00161:381316 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1384                                                                  NAS_SECURITY_ALGORITHMS_EIA2 returned MAC f6.e3.e9.3d(1038738422) for length 11 direction 1, count 0
+000929 00161:381319 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1386                                                               Leaving _nas_message_get_mac() (rc=4142131517)
+000930 00161:381321 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0599                                                               Incremented emm_security_context.dl_count.seq_num -> 1
+000931 00161:381324 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0620                                                            Leaving nas_message_encode() (rc=16)
+000932 00161:381327 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0851                                                         Leaving _emm_as_encode() (rc=16)
+000933 00161:381329 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:1353                                                      Leaving _emm_as_security_req() (rc=263)
+000934 00161:381332 7F56FDE77700 DEBUG NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0968                                                      EMMAS-SAP - Sending msg with id 0x107, primitive EMMAS_SECURITY_REQ (201) to S1AP layer for transmission
+000935 00161:381340 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0973                                                   Leaving _emm_as_send() (rc=0)
+000936 00161:381343 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243                                                Leaving emm_as_send() (rc=0)
+000937 00161:381344 7F56E6FFD700 TRACE MME-AP /src/mme_app/mme_app_transport.c:0057      Entering mme_app_handle_nas_dl_req()
+000938 00161:381345 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                                             Leaving emm_sap_send() (rc=0)
+000939 00161:381351 7F56FDE77700 INFO  NAS-EM rc/nas/emm/SecurityModeControl.c:0679                                             EMM-PROC  - Started Timer T3460 (2) expires in 6 seconds
+000940 00161:381352 7F56E6FFD700 TRACE MME-AP /src/mme_app/mme_app_transport.c:0098      Leaving mme_app_handle_nas_dl_req() (rc=0)
+000941 00161:381353 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0344    Entering s1ap_generate_downlink_nas_transport()
+000942 00161:381355 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0686                                          Leaving _security_request() (rc=0)
+000943 00161:381359 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                                          Entering emm_sap_send()
+000944 00161:381362 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0106                                             Entering emm_reg_send()
+000946 00161:381364 7F56E77FE700 NOTIC S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0399      Send S1AP DOWNLINK_NAS_TRANSPORT message ue_id = 0x00000001 MME_UE_S1AP_ID = 0x00000001 eNB_UE_S1AP_ID = 0x06692D
+000945 00161:381364 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0256                                                Entering emm_fsm_process()
+000947 00161:381367 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0263                                                   EMM-FSM   - Received event COMMON_PROC_REQ (1) in state DEREGISTERED
+000949 00161:381370 7F56E77FE700 TRACE S1AP   c/s1ap/s1ap_mme_nas_procedures.c:0409    Leaving s1ap_generate_downlink_nas_transport() (rc=0)
+000948 00161:381370 7F56FDE77700 TRACE NAS-EM rc/nas/emm/sap/EmmDeregistered.c:0094                                                   Entering EmmDeregistered()
+000950 00161:381372 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0176                                                      Entering emm_fsm_set_status()
+000951 00161:381375 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0182                                                         UE 0x00000001 EMM-FSM   - Status changed: DEREGISTERED ===> COMMON-PROCEDURE-INITIATED
+000952 00161:381379 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1014                                                         Entering mme_ue_context_update_ue_emm_state()
+000954 00161:381382 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1033                                                         Leaving mme_ue_context_update_ue_emm_state()
+000955 00161:381385 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0194                                                      Leaving emm_fsm_set_status() (rc=0)
+000953 00161:381382 7F56FD676700 DEBUG SCTP   rc/sctp/sctp_primitives_server.c:0277    [40][10] Sending buffer 0x7f56dc0028c0 of 42 bytes on stream 1 with ppid 18
+000956 00161:381387 7F56FDE77700 TRACE NAS-EM rc/nas/emm/sap/EmmDeregistered.c:0155                                                   Leaving EmmDeregistered() (rc=0)
+000957 00161:381390 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0271                                                Leaving emm_fsm_process() (rc=0)
+000958 00161:381393 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0119                                             Leaving emm_reg_send() (rc=0)
+000959 00161:381395 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                                          Leaving emm_sap_send() (rc=0)
+000960 00161:381398 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0361                                       Leaving emm_proc_security_mode_control() (rc=0)
+000961 00161:381400 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1199                                    Leaving _emm_attach_security() (rc=0)
+000962 00161:381403 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0479                                 Leaving emm_common_cleanup()
+000963 00161:381405 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0228                              Leaving emm_proc_common_success() (rc=0)
+000964 00161:381407 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0196                           Leaving EmmCommonProcedureInitiated() (rc=0)
+000965 00161:381409 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0271                        Leaving emm_fsm_process() (rc=0)
+000966 00161:381411 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0119                     Leaving emm_reg_send() (rc=0)
+000967 00161:381412 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                  Leaving emm_sap_send() (rc=0)
+000968 00161:381414 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0439               Leaving emm_proc_authentication_complete() (rc=0)
+000969 00161:381415 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0758            Leaving emm_recv_authentication_response() (rc=0)
+000970 00161:381417 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0434         Leaving _emm_as_recv() (rc=0)
+000971 00161:381419 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0541      Leaving _emm_as_data_ind() (rc=0)
+000972 00161:381420 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243    Leaving emm_as_send() (rc=0)
+000973 00161:381422 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143    Leaving emm_sap_send() (rc=0)
+000974 00161:381423 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0326    Leaving nas_proc_ul_transfer_ind() (rc=0)
+
+000649 00160:952093 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0456            Entering _emm_as_data_ind()
+000650 00160:952095 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0460               EMMAS-SAP - Received AS data transfer indication (ue_id=0x00000001, delivered=true, length=19)
+000651 00160:952097 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534               EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000652 00160:952099 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0272               Entering nas_message_decrypt()
+000653 00160:952100 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                  Entering _nas_message_header_decode()
+000654 00160:952102 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                  Leaving _nas_message_header_decode() (rc=1)
+000655 00160:952103 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0338                  Plain NAS message found
+000656 00160:952104 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0345               Leaving nas_message_decrypt() (rc=19)
+000657 00160:952106 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0283               Entering _emm_as_recv()
+000658 00160:952107 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0294                  EMMAS-SAP - Received EMM message (length=19) integrity protected 0 ciphered 0 mac matched 0 security context 0
+000659 00160:952109 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                  EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000660 00160:952111 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0374                  Entering nas_message_decode()
+000661 00160:952112 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0386                     0 (94247287326644 bytes) 07 5c 15 30 0e 15 9f 4e a3 29 86 1e 8f ae 90 59 25 cb fd
+000662 00160:952118 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                     Entering _nas_message_header_decode()
+000663 00160:952119 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                     Leaving _nas_message_header_decode() (rc=1)
+000664 00160:952120 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0392                     _nas_message_header_decode returned size 1
+000665 00160:952362 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0745                     Entering _nas_message_plain_decode()
+000666 00160:952364 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0093                        Entering emm_msg_decode()
+000667 00160:952365 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0112                           EMM-MSG   - Message Type 0x5c
+000668 00160:952369 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0245                        Leaving emm_msg_decode() (rc=19)
+000669 00160:952371 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0765                     Leaving _nas_message_plain_decode() (rc=19)
+000670 00160:952372 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0514                  Leaving nas_message_decode() (rc=19)
+000671 00160:952374 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0783                  Entering emm_recv_authentication_failure()
+000672 00160:952376 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0786                     EMMAS-SAP - Received Authentication Failure message
+000673 00160:952377 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0432                     Entering emm_proc_common_get_args()
+000674 00160:952379 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0435                     Leaving emm_proc_common_get_args() (rc=140011437570320)
+000675 00160:952380 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0254                     Entering emm_proc_authentication_failure()
+000676 00160:952382 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0255                        EMM-PROC  - Authentication failure (ue_id=0x00000001, cause=21)
+000677 00160:952383 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                        EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000678 00160:952387 7F56FDE77700 INFO  NAS-EM -cn/src/nas/emm/Authentication.c:0272                        EMM-PROC  - Stop timer T3460 (-1) UE 0x00000001
+000679 00160:952391 7F56FDE77700 DEBUG NAS-EM -cn/src/nas/emm/Authentication.c:0287                        EMM-PROC  - USIM has detected a mismatch in SQN Ask for new vector(s)
+000680 00160:952393 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0307                        Entering nas_itti_auth_info_req()
+000681 00160:952400 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0338                        Leaving nas_itti_auth_info_req()
+000682 00160:952401 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0375                        ue_id=0x00000001 clear security context vector index
+000683 00160:952403 7F56FDE77700 DEBUG NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0320                        ue_id=0x00000001 cleared auth vectors
+000684 00160:952404 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0507                     Leaving emm_proc_common_clear_args()
+000686 00160:952414 7F5690FF9700 DEBUG S6A    enair-cn/src/s6a/s6a_auth_info.c:0377    s6a_generate_authentication_info_req plmn: 64F000
+000687 00160:952417 7F5690FF9700 DEBUG S6A    enair-cn/src/s6a/s6a_auth_info.c:0378    s6a_generate_authentication_info_req visited_plmn: 64F000
+000688 00160:952459 7F566BFFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    SENT to 'hss.OpenAir5G.Alliance': 'Authentication-Information-Request'16777251/318 f:RP-- src:'(nil)' len:316 {C:263/l:50,C:277/l:12,C:264/l:30,C:296/l:26,C:293/l:30,C:283/l:26,C:1/l:23,V:10415/C:1407/l:15,V:10415/C:1408/l:72}
+000689 00160:952462 7F566BFFF700 ALERT S6A    ea/openair-cn/src/s6a/s6a_task.c:0080    Sending 316b data on connection {----} TCP,#38->127.0.0.1(3868)
+000685 00160:952405 7F56FDE77700 TRACE NAS-EM -cn/src/nas/emm/Authentication.c:0308                  Leaving emm_proc_authentication_failure() (rc=0)
+000690 00160:952486 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0814               Leaving emm_recv_authentication_failure() (rc=0)
+000691 00160:952488 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0434            Leaving _emm_as_recv() (rc=0)
+000692 00160:952489 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0541         Leaving _emm_as_data_ind() (rc=0)
+000693 00160:952491 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243      Leaving emm_as_send() (rc=0)
+000694 00160:952493 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143    Leaving emm_sap_send() (rc=0)
+000695 00160:952494 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0326    Leaving nas_proc_ul_transfer_ind() (rc=0)
+
+
+
+000986 00161:405962 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0300    Entering nas_proc_ul_transfer_ind()
+000987 00161:405966 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110      Entering emm_sap_send()
+000988 00161:405968 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175         Entering emm_as_send()
+000989 00161:405969 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181            EMMAS-SAP - Received primitive EMMAS_DATA_IND (211)
+000990 00161:405971 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0456            Entering _emm_as_data_ind()
+000991 00161:405972 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0460               EMMAS-SAP - Received AS data transfer indication (ue_id=0x00000001, delivered=true, length=8)
+000992 00161:405974 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534               EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000993 00161:405975 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0272               Entering nas_message_decrypt()
+000994 00161:405977 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                  Entering _nas_message_header_decode()
+000995 00161:405978 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                  Leaving _nas_message_header_decode() (rc=6)
+000996 00161:405980 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1313                  Entering _nas_message_get_mac()
+000997 00161:405981 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1371                     NAS_SECURITY_ALGORITHMS_EIA2 dir UPLINK count.seq_num 0 count 0
+000998 00161:405983 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0078                     Byte length: 11, Zero bits: 0:
+000999 00161:405985 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0079                     0 (94247287326644 bytes) 00 00 00 00 00 00 00 00 00 07 5e
+001000 00161:405988 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0080                     0 (94247287326644 bytes) 7f 4b 2f 08 88 72 06 02 d7 10 d9 8f 60 fc 58 af
+001001 00161:405992 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0081                     0 (94247287326644 bytes) 00 07 5e
+001002 00161:405995 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0088                     0 (94247287326644 bytes) 32 f7 89 b0 f8 e0 37 18 7f 3b c5 d2 aa dc 86 03
+001003 00161:405999 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1384                     NAS_SECURITY_ALGORITHMS_EIA2 returned MAC 32.f7.89.b0(2961831730) for length 3 direction 0, count 0
+001004 00161:406001 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1386                  Leaving _nas_message_get_mac() (rc=855083440)
+001005 00161:406002 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0313                  Integrity: MAC Success
+001006 00161:406004 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1029                  Entering _nas_message_decrypt()
+001007 00161:406005 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1122                     NAS_SECURITY_ALGORITHMS_EEA0 dir 0 ul_count.seq_num 0 dl_count.seq_num 1
+001008 00161:406007 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1129                  Leaving _nas_message_decrypt() (rc=7)
+001009 00161:406008 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0345               Leaving nas_message_decrypt() (rc=2)
+001010 00161:406009 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0283               Entering _emm_as_recv()
+001011 00161:406011 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0294                  EMMAS-SAP - Received EMM message (length=2) integrity protected 1 ciphered 1 mac matched 1 security context 1
+001012 00161:406013 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                  EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+001013 00161:406014 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0374                  Entering nas_message_decode()
+001014 00161:406016 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0386                     0 (94247287326644 bytes) 07 5e
+001015 00161:406017 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                     Entering _nas_message_header_decode()
+001016 00161:406019 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                     Leaving _nas_message_header_decode() (rc=1)
+001017 00161:406020 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0392                     _nas_message_header_decode returned size 1
+001018 00161:406022 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0745                     Entering _nas_message_plain_decode()
+001019 00161:406023 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0093                        Entering emm_msg_decode()
+001020 00161:406024 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0112                           EMM-MSG   - Message Type 0x5e
+001021 00161:406028 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0245                        Leaving emm_msg_decode() (rc=2)
+001022 00161:406029 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0765                     Leaving _nas_message_plain_decode() (rc=2)
+001023 00161:406030 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0514                  Leaving nas_message_decode() (rc=2)
+001024 00161:406032 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0839                  Entering emm_recv_security_mode_complete()
+001025 00161:406033 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0842                     EMMAS-SAP - Received Security Mode Complete message
+001026 00161:406035 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0394                     Entering emm_proc_security_mode_complete()
+001027 00161:406036 7F56FDE77700 INFO  NAS-EM rc/nas/emm/SecurityModeControl.c:0395                        EMM-PROC  - Security mode complete (ue_id=0x00000001)
+001028 00161:406043 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                        EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+001029 00161:406045 7F56FDE77700 INFO  NAS-EM rc/nas/emm/SecurityModeControl.c:0409                        EMM-PROC  - Stop timer T3460 (2)
+001030 00161:406049 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0507                     Leaving emm_proc_common_clear_args()
+001031 00161:406051 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                     Entering emm_sap_send()
+001032 00161:406052 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0106                        Entering emm_reg_send()
+001033 00161:406054 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0256                           Entering emm_fsm_process()
+001034 00161:406064 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0263                              EMM-FSM   - Received event COMMON_PROC_CNF (2) in state COMMON-PROCEDURE-INITIATED
+001035 00161:406069 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0090                              Entering EmmCommonProcedureInitiated()
+001036 00161:406074 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0176                                 Entering emm_fsm_set_status()
+001037 00161:406079 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0182                                    UE 0x00000001 EMM-FSM   - Status changed: COMMON-PROCEDURE-INITIATED ===> DEREGISTERED
+001038 00161:406085 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1014                                    Entering mme_ue_context_update_ue_emm_state()
+001039 00161:406092 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1033                                    Leaving mme_ue_context_update_ue_emm_state()
+001040 00161:406097 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0194                                 Leaving emm_fsm_set_status() (rc=0)
+001041 00161:406101 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0217                                 Entering emm_proc_common_success()
+001042 00161:406106 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                    EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+001043 00161:406111 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1232                                    Entering _emm_attach()
+001044 00161:406115 7F56FDE77700 INFO  NAS-EM /openair-cn/src/nas/emm/Attach.c:1237                                       ue_id=0x00000001 EMM-PROC  - Attach UE
+001045 00161:406120 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0158                                       Entering esm_sap_send()
+001046 00161:406125 7F56FDE77700 INFO  NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0168                                          ESM-SAP   - Received primitive ESM_PDN_CONNECTIVITY_REQ (12)
+001047 00161:406131 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0324                                          Entering _esm_sap_recv()
+001048 00161:406136 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/msg/esm_msg.c:0097                                             Entering esm_msg_decode()
+001049 00161:406143 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/msg/esm_msg.c:0216                                             Leaving esm_msg_decode() (rc=44)
+001050 00161:406148 7F56FDE77700 DEBUG NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0518                                             ESM-SAP   - PDN_CONNECTIVITY_REQUEST pti 1 ebi 0
+001051 00161:406152 7F56FDE77700 TRACE NAS-ES ir-cn/src/nas/esm/sap/esm_recv.c:0159                                             Entering esm_recv_pdn_connectivity_request()
+001052 00161:406157 7F56FDE77700 INFO  NAS-ES ir-cn/src/nas/esm/sap/esm_recv.c:0160                                                ESM-SAP   - Received PDN Connectivity Request message (ue_id=1, pti=1, ebi=0)
+001053 00161:406162 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0225                                                Entering nas_itti_pdn_connectivity_req()
+001054 00161:406173 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0295                                                Leaving nas_itti_pdn_connectivity_req()
+001055 00161:406176 7F56E6FFD700 TRACE MME-AP -cn/src/mme_app/mme_app_bearer.c:0265      Entering mme_app_handle_nas_pdn_connectivity_req()
+001056 00161:406177 7F56FDE77700 TRACE NAS-ES ir-cn/src/nas/esm/sap/esm_recv.c:0301                                             Leaving esm_recv_pdn_connectivity_request() (rc=-1)
+001058 00161:406184 7F56E6FFD700 DEBUG MME-AP -cn/src/mme_app/mme_app_bearer.c:0268         Received NAS_PDN_CONNECTIVITY_REQ from NAS Handling imsi 460000000000095
+001057 00161:406184 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0745                                          Leaving _esm_sap_recv() (rc=0)
+001059 00161:406188 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0273                                       Leaving esm_sap_send() (rc=0)
+001060 00161:406193 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0163                                       Entering emm_proc_common_initialize()
+001061 00161:406198 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0188                                       Leaving emm_proc_common_initialize() (rc=0)
+001062 00161:406202 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1360                                    Leaving _emm_attach() (rc=0)
+001063 00161:406204 7F56E6FFD700 DEBUG MME-AP -cn/src/mme_app/mme_app_bearer.c:0311         PCO <Protocol Configuration Options>    <Configuration protocol>0</Configuration protocol>
+        <Protocol ID>32801</Protocol ID>
+        <Length of protocol ID>16</Length of protocol ID>
+        <Length>16</Length>
+	<values>0x1 0x1 0x0 0x10 0x81 0x6 0x0 0x0 0x0 0x0 0x83 0x6 0x0 0x0 0x0 0x0 </values>
+        <Protocol ID>3</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>10</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>2</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>12</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>1</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>13</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+</Protocol Configuration Options>
+
+001065 00161:406209 7F56E6FFD700 TRACE MME-AP n/src/mme_app/mme_app_location.c:0055         Entering mme_app_send_s6a_update_location_req()
+001064 00161:406208 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0479                                 Leaving emm_common_cleanup()
+001066 00161:406212 7F56E6FFD700 DEBUG MME-AP n/src/mme_app/mme_app_location.c:0058            Handling imsi 460000000000095
+001067 00161:406214 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0228                              Leaving emm_proc_common_success() (rc=0)
+001068 00161:406219 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0196                           Leaving EmmCommonProcedureInitiated() (rc=0)
+001069 00161:406221 7F56E6FFD700 TRACE MME-AP n/src/mme_app/mme_app_location.c:0084         Leaving mme_app_send_s6a_update_location_req() (rc=0)
+001070 00161:406224 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0271                        Leaving emm_fsm_process() (rc=0)
+001071 00161:406224 7F56E6FFD700 TRACE MME-AP -cn/src/mme_app/mme_app_bearer.c:0327      Leaving mme_app_handle_nas_pdn_connectivity_req() (rc=0)
+001072 00161:406227 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0119                     Leaving emm_reg_send() (rc=0)
+001073 00161:406231 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                  Leaving emm_sap_send() (rc=0)
+001074 00161:406234 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0444               Leaving emm_proc_security_mode_complete() (rc=0)
+001075 00161:406238 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0850            Leaving emm_recv_security_mode_complete() (rc=0)
+001076 00161:406242 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0434         Leaving _emm_as_recv() (rc=0)
+001077 00161:406246 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0541      Leaving _emm_as_data_ind() (rc=0)
+001078 00161:406249 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243    Leaving emm_as_send() (rc=0)
+001079 00161:406252 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143    Leaving emm_sap_send() (rc=0)
+001081 00161:406256 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0326    Leaving nas_proc_ul_transfer_ind() (rc=0)
+001080 00161:406255 7F5690FF9700 DEBUG S6A    /openair-cn/src/s6a/s6a_up_loc.c:0280    Sending s6a ulr for imsi=460000000000095
+
+
+
+000986 00161:405962 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0300    Entering nas_proc_ul_transfer_ind()
+000987 00161:405966 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110      Entering emm_sap_send()
+000988 00161:405968 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0175         Entering emm_as_send()
+000989 00161:405969 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0181            EMMAS-SAP - Received primitive EMMAS_DATA_IND (211)
+000990 00161:405971 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0456            Entering _emm_as_data_ind()
+000991 00161:405972 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0460               EMMAS-SAP - Received AS data transfer indication (ue_id=0x00000001, delivered=true, length=8)
+000992 00161:405974 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534               EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+000993 00161:405975 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0272               Entering nas_message_decrypt()
+000994 00161:405977 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                  Entering _nas_message_header_decode()
+000995 00161:405978 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                  Leaving _nas_message_header_decode() (rc=6)
+000996 00161:405980 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1313                  Entering _nas_message_get_mac()
+000997 00161:405981 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1371                     NAS_SECURITY_ALGORITHMS_EIA2 dir UPLINK count.seq_num 0 count 0
+000998 00161:405983 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0078                     Byte length: 11, Zero bits: 0:
+000999 00161:405985 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0079                     0 (94247287326644 bytes) 00 00 00 00 00 00 00 00 00 07 5e
+001000 00161:405988 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0080                     0 (94247287326644 bytes) 7f 4b 2f 08 88 72 06 02 d7 10 d9 8f 60 fc 58 af
+001001 00161:405992 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0081                     0 (94247287326644 bytes) 00 07 5e
+001002 00161:405995 7F56FDE77700 TRACE NAS    ir-cn/src/secu/nas_stream_eia2.c:0088                     0 (94247287326644 bytes) 32 f7 89 b0 f8 e0 37 18 7f 3b c5 d2 aa dc 86 03
+001003 00161:405999 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1384                     NAS_SECURITY_ALGORITHMS_EIA2 returned MAC 32.f7.89.b0(2961831730) for length 3 direction 0, count 0
+001004 00161:406001 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1386                  Leaving _nas_message_get_mac() (rc=855083440)
+001005 00161:406002 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0313                  Integrity: MAC Success
+001006 00161:406004 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1029                  Entering _nas_message_decrypt()
+001007 00161:406005 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:1122                     NAS_SECURITY_ALGORITHMS_EEA0 dir 0 ul_count.seq_num 0 dl_count.seq_num 1
+001008 00161:406007 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:1129                  Leaving _nas_message_decrypt() (rc=7)
+001009 00161:406008 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0345               Leaving nas_message_decrypt() (rc=2)
+001010 00161:406009 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0283               Entering _emm_as_recv()
+001011 00161:406011 7F56FDE77700 INFO  NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0294                  EMMAS-SAP - Received EMM message (length=2) integrity protected 1 ciphered 1 mac matched 1 security context 1
+001012 00161:406013 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                  EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+001013 00161:406014 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0374                  Entering nas_message_decode()
+001014 00161:406016 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0386                     0 (94247287326644 bytes) 07 5e
+001015 00161:406017 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0663                     Entering _nas_message_header_decode()
+001016 00161:406019 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0717                     Leaving _nas_message_header_decode() (rc=1)
+001017 00161:406020 7F56FDE77700 DEBUG NAS    rc/nas/api/network/nas_message.c:0392                     _nas_message_header_decode returned size 1
+001018 00161:406022 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0745                     Entering _nas_message_plain_decode()
+001019 00161:406023 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0093                        Entering emm_msg_decode()
+001020 00161:406024 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0112                           EMM-MSG   - Message Type 0x5e
+001021 00161:406028 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/msg/emm_msg.c:0245                        Leaving emm_msg_decode() (rc=2)
+001022 00161:406029 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0765                     Leaving _nas_message_plain_decode() (rc=2)
+001023 00161:406030 7F56FDE77700 TRACE NAS    rc/nas/api/network/nas_message.c:0514                  Leaving nas_message_decode() (rc=2)
+001024 00161:406032 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0839                  Entering emm_recv_security_mode_complete()
+001025 00161:406033 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0842                     EMMAS-SAP - Received Security Mode Complete message
+001026 00161:406035 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0394                     Entering emm_proc_security_mode_complete()
+001027 00161:406036 7F56FDE77700 INFO  NAS-EM rc/nas/emm/SecurityModeControl.c:0395                        EMM-PROC  - Security mode complete (ue_id=0x00000001)
+001028 00161:406043 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                        EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+001029 00161:406045 7F56FDE77700 INFO  NAS-EM rc/nas/emm/SecurityModeControl.c:0409                        EMM-PROC  - Stop timer T3460 (2)
+001030 00161:406049 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0507                     Leaving emm_proc_common_clear_args()
+001031 00161:406051 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0110                     Entering emm_sap_send()
+001032 00161:406052 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0106                        Entering emm_reg_send()
+001033 00161:406054 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0256                           Entering emm_fsm_process()
+001034 00161:406064 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0263                              EMM-FSM   - Received event COMMON_PROC_CNF (2) in state COMMON-PROCEDURE-INITIATED
+001035 00161:406069 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0090                              Entering EmmCommonProcedureInitiated()
+001036 00161:406074 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0176                                 Entering emm_fsm_set_status()
+001037 00161:406079 7F56FDE77700 INFO  NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0182                                    UE 0x00000001 EMM-FSM   - Status changed: COMMON-PROCEDURE-INITIATED ===> DEREGISTERED
+001038 00161:406085 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1014                                    Entering mme_ue_context_update_ue_emm_state()
+001039 00161:406092 7F56FDE77700 TRACE MME-AP cn/src/mme_app/mme_app_context.c:1033                                    Leaving mme_ue_context_update_ue_emm_state()
+001040 00161:406097 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0194                                 Leaving emm_fsm_set_status() (rc=0)
+001041 00161:406101 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0217                                 Entering emm_proc_common_success()
+001042 00161:406106 7F56FDE77700 INFO  NAS-EM ir-cn/src/nas/emm/emm_data_ctx.c:0534                                    EMM-CTX - get UE id 0x00000001 context 0x7f56f4000f50
+001043 00161:406111 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1232                                    Entering _emm_attach()
+001044 00161:406115 7F56FDE77700 INFO  NAS-EM /openair-cn/src/nas/emm/Attach.c:1237                                       ue_id=0x00000001 EMM-PROC  - Attach UE
+001045 00161:406120 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0158                                       Entering esm_sap_send()
+001046 00161:406125 7F56FDE77700 INFO  NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0168                                          ESM-SAP   - Received primitive ESM_PDN_CONNECTIVITY_REQ (12)
+001047 00161:406131 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0324                                          Entering _esm_sap_recv()
+001048 00161:406136 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/msg/esm_msg.c:0097                                             Entering esm_msg_decode()
+001049 00161:406143 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/msg/esm_msg.c:0216                                             Leaving esm_msg_decode() (rc=44)
+001050 00161:406148 7F56FDE77700 DEBUG NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0518                                             ESM-SAP   - PDN_CONNECTIVITY_REQUEST pti 1 ebi 0
+001051 00161:406152 7F56FDE77700 TRACE NAS-ES ir-cn/src/nas/esm/sap/esm_recv.c:0159                                             Entering esm_recv_pdn_connectivity_request()
+001052 00161:406157 7F56FDE77700 INFO  NAS-ES ir-cn/src/nas/esm/sap/esm_recv.c:0160                                                ESM-SAP   - Received PDN Connectivity Request message (ue_id=1, pti=1, ebi=0)
+001053 00161:406162 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0225                                                Entering nas_itti_pdn_connectivity_req()
+001054 00161:406173 7F56FDE77700 TRACE NAS    -cn/src/nas/nas_itti_messaging.c:0295                                                Leaving nas_itti_pdn_connectivity_req()
+001055 00161:406176 7F56E6FFD700 TRACE MME-AP -cn/src/mme_app/mme_app_bearer.c:0265      Entering mme_app_handle_nas_pdn_connectivity_req()
+001056 00161:406177 7F56FDE77700 TRACE NAS-ES ir-cn/src/nas/esm/sap/esm_recv.c:0301                                             Leaving esm_recv_pdn_connectivity_request() (rc=-1)
+001058 00161:406184 7F56E6FFD700 DEBUG MME-AP -cn/src/mme_app/mme_app_bearer.c:0268         Received NAS_PDN_CONNECTIVITY_REQ from NAS Handling imsi 460000000000095
+001057 00161:406184 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0745                                          Leaving _esm_sap_recv() (rc=0)
+001059 00161:406188 7F56FDE77700 TRACE NAS-ES air-cn/src/nas/esm/sap/esm_sap.c:0273                                       Leaving esm_sap_send() (rc=0)
+001060 00161:406193 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0163                                       Entering emm_proc_common_initialize()
+001061 00161:406198 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0188                                       Leaving emm_proc_common_initialize() (rc=0)
+001062 00161:406202 7F56FDE77700 TRACE NAS-EM /openair-cn/src/nas/emm/Attach.c:1360                                    Leaving _emm_attach() (rc=0)
+001063 00161:406204 7F56E6FFD700 DEBUG MME-AP -cn/src/mme_app/mme_app_bearer.c:0311         PCO <Protocol Configuration Options>    <Configuration protocol>0</Configuration protocol>
+        <Protocol ID>32801</Protocol ID>
+        <Length of protocol ID>16</Length of protocol ID>
+        <Length>16</Length>
+	<values>0x1 0x1 0x0 0x10 0x81 0x6 0x0 0x0 0x0 0x0 0x83 0x6 0x0 0x0 0x0 0x0 </values>
+        <Protocol ID>3</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>10</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>2</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>12</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>1</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+        <Protocol ID>13</Protocol ID>
+        <Length of protocol ID>0</Length of protocol ID>
+        <Length>0</Length>
+</Protocol Configuration Options>
+
+001065 00161:406209 7F56E6FFD700 TRACE MME-AP n/src/mme_app/mme_app_location.c:0055         Entering mme_app_send_s6a_update_location_req()
+001064 00161:406208 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0479                                 Leaving emm_common_cleanup()
+001066 00161:406212 7F56E6FFD700 DEBUG MME-AP n/src/mme_app/mme_app_location.c:0058            Handling imsi 460000000000095
+001067 00161:406214 7F56FDE77700 TRACE NAS-EM enair-cn/src/nas/emm/EmmCommon.c:0228                              Leaving emm_proc_common_success() (rc=0)
+001068 00161:406219 7F56FDE77700 TRACE NAS-EM ap/EmmCommonProcedureInitiated.c:0196                           Leaving EmmCommonProcedureInitiated() (rc=0)
+001069 00161:406221 7F56E6FFD700 TRACE MME-AP n/src/mme_app/mme_app_location.c:0084         Leaving mme_app_send_s6a_update_location_req() (rc=0)
+001070 00161:406224 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_fsm.c:0271                        Leaving emm_fsm_process() (rc=0)
+001071 00161:406224 7F56E6FFD700 TRACE MME-AP -cn/src/mme_app/mme_app_bearer.c:0327      Leaving mme_app_handle_nas_pdn_connectivity_req() (rc=0)
+001072 00161:406227 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_reg.c:0119                     Leaving emm_reg_send() (rc=0)
+001073 00161:406231 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143                  Leaving emm_sap_send() (rc=0)
+001074 00161:406234 7F56FDE77700 TRACE NAS-EM rc/nas/emm/SecurityModeControl.c:0444               Leaving emm_proc_security_mode_complete() (rc=0)
+001075 00161:406238 7F56FDE77700 TRACE NAS-EM ir-cn/src/nas/emm/sap/emm_recv.c:0850            Leaving emm_recv_security_mode_complete() (rc=0)
+001076 00161:406242 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0434         Leaving _emm_as_recv() (rc=0)
+001077 00161:406246 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0541      Leaving _emm_as_data_ind() (rc=0)
+001078 00161:406249 7F56FDE77700 TRACE NAS-EM nair-cn/src/nas/emm/sap/emm_as.c:0243    Leaving emm_as_send() (rc=0)
+001079 00161:406252 7F56FDE77700 TRACE NAS-EM air-cn/src/nas/emm/sap/emm_sap.c:0143    Leaving emm_sap_send() (rc=0)
+001081 00161:406256 7F56FDE77700 TRACE NAS-EM ea/openair-cn/src/nas/nas_proc.c:0326    Leaving nas_proc_ul_transfer_ind() (rc=0)
+001080 00161:406255 7F5690FF9700 DEBUG S6A    /openair-cn/src/s6a/s6a_up_loc.c:0280    Sending s6a ulr for imsi=460000000000095
+
